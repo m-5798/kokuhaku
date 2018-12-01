@@ -1,1 +1,57 @@
 .p-member
+  padding: 0 70px
+  margin-top: 152px
+  .p-member_profile
+    margin: 0 76px
+    &:nth-of-type(1)
+      margin-top: 77px
+    &:nth-of-type(n+2)
+      margin-top: 39px
+    > h2
+      width: 250px
+      letter-spacing: .75px
+      position: relative
+      > a
+        display: inline-block
+        position: absolute
+        right: 0
+    .c-flexbox
+      margin-top: 16px
+      > .c-flexbox_col
+        width: 488px
+        position: relative
+      > .c-flexbox_col > p,
+      > .c-flexbox_col > ul
+        font-size: $fontSize_s
+        letter-spacing: .75px
+      > .c-flexbox_col > ul > li
+        font-family: $fontFamily_en
+        font-weight: lighter
+        line-height: 1.8
+      > .c-flexbox_col > img
+        position: absolute
+        top: -70px
+        left: 67px
+  .p-member_recruit
+    margin: 46px 0 0 572px
+    > h2
+      width: 250px
+    > div
+      margin-top: 16px
+      > p:first-child
+        font-size: $fontSize_s
+        letter-spacing: .75px
+      > p:last-child
+        line-height: 1
+        margin-top: 25px
+        a
+          font-family: $fontFamily_en
+          font-size: $fontSize_s
+          font-weight: lighter
+          letter-spacing: 1px
+          padding-right: 45px
+          background-image: url("/img/arrow.svg")
+          background-position: right center
+          background-repeat: no-repeat
+          background-size: 41px 4px
+          display: inline-block
