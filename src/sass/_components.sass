@@ -47,10 +47,31 @@
     flex-wrap: wrap
 
 
+.c-socialIconLink
+  > a
+    transition: none 0 ease
+    display: block
+    position: relative
+    &:hover
+      opacity: 1
+      > img:first-child
+        transition: opacity .3s ease-out
+        opacity: 0
+    > img
+      position: absolute
+      top: 0
+      left: 0
+      &:first-child
+        transition: opacity 1.5s ease-out
+        z-index: 1
+        opacity: 1
+
+
 // PC
 @media print, screen and (min-width: $breakPoint + 1)
   .c-visible-sp
     display: none
+
 
 // SP
 @media screen and (max-width: $breakPoint)
