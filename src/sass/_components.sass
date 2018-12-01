@@ -1,0 +1,61 @@
+.c-logo
+
+
+.c-nav
+
+
+.c-flexbox
+  display: flex
+  @for $i from 1 through 12
+    & &_col#{$i}
+      width: #{$i / 12 * 100%}
+      flex-basis: #{$i / 12 * 100%}
+  &#{&}-bordered
+    > .c-flexbox_col:not(:last-of-type),
+    > .c-flexbox_col1:not(:last-of-type),
+    > .c-flexbox_col2:not(:last-of-type),
+    > .c-flexbox_col3:not(:last-of-type),
+    > .c-flexbox_col4:not(:last-of-type),
+    > .c-flexbox_col5:not(:last-of-type),
+    > .c-flexbox_col6:not(:last-of-type),
+    > .c-flexbox_col7:not(:last-of-type),
+    > .c-flexbox_col8:not(:last-of-type),
+    > .c-flexbox_col9:not(:last-of-type),
+    > .c-flexbox_col10:not(:last-of-type),
+    > .c-flexbox_col11:not(:last-of-type),
+    > .c-flexbox_col12:not(:last-of-type)
+      border-right: 1px solid #dcdcdc
+  &#{&}-inline
+    display: inline-flex
+  &#{&}-justifyCenter
+    justify-content: center
+  &#{&}-justifyEnd
+    justify-content: flex-end
+  &#{&}-justifyAround
+    justify-content: space-around
+  &#{&}-justifyBetween
+    justify-content: space-between
+  &#{&}-alignCenter
+    align-items: center
+  &#{&}-alignEnd
+    align-items: flex-end
+  &#{&}-directionColumn
+    flex-direction: column
+  &#{&}-directionRowreverse
+    flex-direction: row-reverse
+  &#{&}-flexWrap
+    flex-wrap: wrap
+
+
+// PC
+@media print, screen and (min-width: $breakPoint + 1)
+  .c-visible-sp
+    display: none
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .c-visible-pc
+    display: none !important
+
+// IE11
+// @media all and (-ms-high-contrast: none)

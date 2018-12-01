@@ -6,13 +6,25 @@
 <body>
   <div class="l-wrapper">
     <header>
-      <nav></nav>
+      <%- include('_introduction'); %>
     </header>
     <main>
-
+      <article id="business">
+        <%- include('_business'); %>
+      </article>
+      <article id="works">
+        <%- include('_works'); %>
+      </article>
+      <article id="member">
+        <%- include('_member'); %>
+      </article>
     </main>
     <footer>
+      <%- include('_footer'); %>
     </footer>
+    <aside>
+      <%- include('_information'); %>
+    </aside>
   </div>
 <script src="/js/scripts.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
