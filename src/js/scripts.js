@@ -35,4 +35,12 @@ if (typeof Site === 'undefined') {
 
 $(document).ready(function () {
   Site.anchorScroll();
+
+  var $info = $('.p-information')
+    , $toggle = $('[data-kkhk-toggle]')
+    , cls = 'p-information-open'
+    ;
+  $toggle.on('click', function() {
+    $info.toggleClass(cls);
+  });
 });

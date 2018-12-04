@@ -1,0 +1,27 @@
+<%
+  var name, href, w
+    , c = '_black'
+    ;
+  switch(type) {
+    case 'facebook':
+      name = 'facebook';
+      href = 'https://www.facebook.com/kokuhakuinc/';
+      w = 19;
+      break;
+    case 'instagram':
+      name = 'instagram';
+      href = 'https://www.instagram.com/kokuhaku_inc/';
+      w = 39;
+      break;
+    case 'twitter':
+      name = 'twitter';
+      href = 'https://twitter.com/kokuhaku_inc';
+      w = 37;
+      break;
+  }
+  if(typeof url !== 'undefined') href = url;
+  if(typeof width !== 'undefined') w = width;
+  if(typeof color !== 'undefined' && color === 'white') c = `_${color}`;
+%>
+
+<a href="<%= href; %>" target="_blank"><img src="<%= config.path.img; %>/<%= name; %><%= c; %>.svg" width="<%= w; %>" alt="Kokuhaku Inc. <%= name; %>"><img src="<%= config.path.img; %>/<%= name; %>_color.svg" width="<%= w; %>" alt="Kokuhaku Inc. <%= name; %>"></a>

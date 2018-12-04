@@ -1,7 +1,8 @@
 .c-logo
-
-
-.c-nav
+  position: fixed
+  top: 25px
+  left: calc(50% - 570px)
+  z-index: 2
 
 
 .c-flexbox
@@ -50,21 +51,27 @@
 .c-socialIconLink
   > a
     transition: none 0 ease
+    font-size: 0
     display: block
     position: relative
     &:hover
       opacity: 1
+      > img
+        transition: opacity .35s ease-out
       > img:first-child
-        transition: opacity .3s ease-out
         opacity: 0
+      > img:last-child
+        opacity: 1
     > img
+      transition: opacity 1.5s ease-out
       position: absolute
       top: 0
       left: 0
       &:first-child
-        transition: opacity 1.5s ease-out
         z-index: 1
         opacity: 1
+      &:last-child
+        opacity: 0
 
 
 // PC

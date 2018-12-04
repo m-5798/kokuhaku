@@ -9,9 +9,9 @@
       </div>
       <div class="c-flexbox_col6">
         <ul class="p-works_social">
-          <li class="c-socialIconLink"><a href="https://www.instagram.com/kokuhaku_inc/" target="_blank"><img src="<%= config.path.img; %>/instagram.svg" width="39" alt="Kokuhaku Inc. instagram"><img src="<%= config.path.img; %>/instagram_color.svg" width="39" alt="Kokuhaku Inc. instagram"></a></li>
-          <li class="c-socialIconLink"><a href="https://www.facebook.com/kokuhakuinc/" target="_blank"><img src="<%= config.path.img; %>/facebook.svg" width="19" alt="Kokuhaku Inc. facebook"><img src="<%= config.path.img; %>/facebook_color.svg" width="19" alt="Kokuhaku Inc. facebook"></a></li>
-          <li class="c-socialIconLink"><a href="https://twitter.com/kokuhaku_inc" target="_blank"><img src="<%= config.path.img; %>/twitter.svg" width="37" alt="Kokuhaku Inc.twitter"><img src="<%= config.path.img; %>/twitter_color.svg" width="37" alt="Kokuhaku Inc.twitter"></a></li>
+          <li class="c-socialIconLink"><%- include('_iconlink', {type: 'instagram'}); %></li>
+          <li class="c-socialIconLink"><%- include('_iconlink', {type: 'facebook'}); %></li>
+          <li class="c-socialIconLink"><%- include('_iconlink', {type: 'twitter'}); %></li>
         </ul>
       </div>
     </div>
