@@ -1,9 +1,30 @@
 .c-logo
+  transition: opacity 1.2s .5s ease-out, transform 1.2s ease-out
   position: fixed
   top: 25px
   left: calc(50% - 570px)
   z-index: 2
+  opacity: 0
+  transform: translateY(50px)
+  &.c-logo-show
+    opacity: 1
+    transform: translateY(0)
 
+.c-heading1
+  transition: opacity 1.2s .5s ease-out, transform 1.2s ease-out
+  opacity: 0
+  transform: translateX(-70px)
+  &.c-heading1-show
+    opacity: 1
+    transform: translateX(0)
+
+.c-heading2
+  transition: opacity 1.2s .8s ease-out, transform 1.2s .3s ease-out
+  opacity: 0
+  transform: translateY(100px)
+  &.c-heading2-show
+    opacity: 1
+    transform: translateY(0)
 
 .c-flexbox
   display: flex

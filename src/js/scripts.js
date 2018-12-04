@@ -43,4 +43,52 @@ $(document).ready(function () {
   $toggle.on('click', function() {
     $info.toggleClass(cls);
   });
+
+  var logo = '[data-kkhk-logo]'
+    , lede1 = '[data-kkhk-lede1]'
+    , lede2 = '[data-kkhk-lede2]'
+    , lede3 = '[data-kkhk-lede3]'
+    , businessH1 = '[data-kkhk-business-h1]'
+    , businessH2_1 = '[data-kkhk-business-h2_1]'
+    , businessH2_2 = '[data-kkhk-business-h2_2]'
+    , worksH1 = '[data-kkhk-works-h1]'
+    , memberH1 = '[data-kkhk-member-h1]'
+    , memberH2_1 = '[data-kkhk-member-h2_1]'
+    , memberH2_2 = '[data-kkhk-member-h2_2]'
+    , memberH2_3 = '[data-kkhk-member-h2_3]'
+    , memberH2_4 = '[data-kkhk-member-h2_4]'
+    , variation = '-show'
+    ;
+
+  $.each([
+    lede1,
+    lede3,
+    businessH1,
+    businessH2_1,
+    businessH2_2,
+    worksH1,
+    memberH1,
+    memberH2_1,
+    memberH2_2,
+    memberH2_3,
+    memberH2_4,
+  ], function(i, obj) {
+    var showClass = $(obj).attr('class') + variation;
+    ScrollOut({
+      targets: obj,
+      once: true,
+      onShown: function() {
+        $(obj).addClass(showClass);
+      }
+    });
+  });
+
+  ScrollOut({
+    targets: lede2,
+    once: true,
+    onShown: function(el) {
+      $(logo).addClass($(logo).attr('class') + variation);
+      $(el).addClass($(el).attr('class') + variation);
+    }
+  });
 });
