@@ -1,10 +1,10 @@
 {
   "config": {
     "path": {
-      "img": "/img",
-      "css": "/css",
-      "js": "/js",
-      "ico": "/img/favicon.png"
+      "img": "./img",
+      "css": "./css",
+      "js": "./js",
+      "ico": "./img/favicon.png"
     },
     "meta": {
       "title": "Kokuhaku Inc. / コクハク株式会社",

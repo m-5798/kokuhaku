@@ -6,7 +6,7 @@
   > div > p
     letter-spacing: .75px
     line-height: 1
-  .c-flexbox
+  > div > .c-flexbox
     min-height: 185px
     margin: 96px 0 0 110px
     > .c-flexbox_col6:nth-child(1)
@@ -24,7 +24,7 @@
         font-weight: lighter
         letter-spacing: 1px
         padding-bottom: 17px
-        background-image: url("/img/arrow_black.svg")
+        background-image: url("#{$imagePath}/arrow_black.svg")
         background-position: left bottom
         background-repeat: no-repeat
         background-size: 41px 4px
@@ -33,15 +33,18 @@
     font-size: 0
     margin: 74px 0 0 186px
     .c-socialIconLink
-      display: inline-block
-      &:nth-child(1)
+      &:nth-child(1),
+      &:nth-child(1) a
         width: 39px
-      &:nth-child(2)
+        height: 39px
+      &:nth-child(2),
+      &:nth-child(2) a
         width: 19px
-        margin-left: 65px
-      &:nth-child(3)
+        height: 37px
+      &:nth-child(3),
+      &:nth-child(3) a
         width: 37px
-        margin-left: 65px
+        height: 30px
 
 
 // SP
@@ -56,7 +59,7 @@
       margin: 50px 0 0
     > div > p
       font-size: $fontSize_xs
-    .c-flexbox
+    > div > .c-flexbox
       min-height: auto
       margin: 74px 0 0 0
       display: block
@@ -80,24 +83,21 @@
       width: 165px
       height: 27px
       margin: 25px auto 0
-      display: flex
-      justify-content: space-between
-      align-items: center
       .c-socialIconLink
-        display: block
-        &:nth-child(1)
+        &:nth-child(1),
+        &:nth-child(1) a
           width: 27px
           height: 27px
-        &:nth-child(2)
+        &:nth-child(2),
+        &:nth-child(2) a
           width: 14px
           height: 26px
-          margin-left: 0
-        &:nth-child(3)
+        &:nth-child(3),
+        &:nth-child(3) a
           width: 26px
           height: 21px
-          margin-left: 0
 
 
 // Safari
-_::-webkit-full-page-media, _:future, :root .p-works .c-flexbox > .c-flexbox_col6:nth-child(1) p:last-child a
+_::-webkit-full-page-media, _:future, :root .p-works > div > .c-flexbox > .c-flexbox_col6:nth-child(1) p:last-child a
   font-weight: normal
