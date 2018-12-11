@@ -57,3 +57,66 @@
           background-repeat: no-repeat
           background-size: 41px 4px
           display: inline-block
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-member
+    width: 100%
+    padding: 0 20px
+    margin-top: 120px
+    overflow-x: hidden
+    .p-member_profile
+      margin: 0 20px
+      position: relative
+      &:nth-of-type(1)
+        margin-top: 50px
+        .c-flexbox_col img
+          width: 134px
+      &:nth-of-type(2)
+        margin-top: 50px
+        .c-flexbox_col img
+          width: 149px
+      &:nth-of-type(3)
+        margin-top: 50px
+      > h2
+        width: 140px
+        > .c-socialIconLink
+          width: 8px
+          height: 16px
+          margin-top: 0
+          bottom: 5px
+      .c-flexbox
+        margin-top: 9px
+        display: block
+        > .c-flexbox_col
+          width: auto
+        > .c-flexbox_col:last-child
+          position: static
+        > .c-flexbox_col > p,
+        > .c-flexbox_col > ul
+          font-size: $fontSize_xs
+        > .c-flexbox_col > img
+          top: -35px
+          right: 0
+          left: auto
+    .p-member_recruit
+      margin: 50px 20px 0
+      > h2
+        width: 140px
+        > img
+          width: 55px
+      > div
+        margin-top: 9px
+        > p:first-child
+          font-size: $fontSize_xs
+        > p:last-child
+          margin-top: 17px
+          a
+            font-size: $fontSize_xs
+
+
+// Safari
+_::-webkit-full-page-media, _:future, :root .p-member .p-member_profile .c-flexbox > .c-flexbox_col > ul > li,
+_::-webkit-full-page-media, _:future, :root .p-member .p-member_recruit > div > p:last-child a
+  font-weight: normal

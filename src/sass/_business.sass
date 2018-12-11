@@ -57,7 +57,7 @@
         th
           text-align: left
           vertical-align: bottom
-          padding: 27px 11px 0px 0
+          padding: 27px 11px 0 0
           span
             letter-spacing: .75px
             padding: 9px 14px 10px 13px
@@ -71,3 +71,82 @@
           width: 123px
           padding: 27px 0 8px
           border-bottom: 1px solid #231815
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-business
+    width: 100%
+    padding: 0 20px
+    margin-top: 100px
+    overflow-x: hidden
+    .p-business_products
+      padding: 0 20px
+      margin: 40px 0 0
+      .p-business_productsItem1
+        > .c-flexbox
+          margin-top: 65px
+          display: block
+          .c-flexbox_col6
+            width: 100%
+            padding: 0
+          .c-flexbox_col6:first-child
+            text-align: center
+            img
+              width: 56px
+          .c-flexbox_col6:last-child > p:nth-of-type(1)
+            font-size: $fontSize_m
+            text-indent: -10px
+            margin-top: 80px
+          .c-flexbox_col6:last-child > p:nth-of-type(2)
+            font-size: $fontSize_m
+            margin-top: 20px
+          .c-flexbox_col6:last-child > p:nth-of-type(3)
+            font-size: $fontSize_xxs
+            line-height: 1
+            margin-top: 20px
+          .c-flexbox_col6:last-child > p:nth-of-type(4)
+            font-size: $fontSize_xs
+            margin-top: 10px
+      .p-business_productsItem2
+        margin-top: 25px
+        p
+          font-size: $fontSize_xxs
+          text-align: right
+    .p-business_works
+      padding: 0 20px
+      margin: 45px 0 0
+      .p-business_worksItem1
+        > p
+          font-size: $fontSize_xs
+          margin-top: 20px
+        > table
+          margin-top: 20px
+          display: block
+          tbody,
+          tr
+            display: block
+          tr
+            font-size: 0
+            border-bottom: 1px solid #231815
+          tr:first-child th
+            padding-top: 0
+          th
+            font-size: $fontSize_xxs
+            padding: 18px 0 0
+            display: block
+            span
+              padding: 4px 6px
+          td
+            font-size: $fontSize_xxs
+            width: 20%
+            padding: 12px 0 4px
+            border-bottom: 0 none transparent
+            display: inline-block
+
+
+// Safari
+_::-webkit-full-page-media, _:future, :root .p-business .p-business_products .p-business_productsItem1 .c-flexbox_col6:last-child > p:nth-of-type(1),
+_::-webkit-full-page-media, _:future, :root .p-business .p-business_products .p-business_productsItem1 .c-flexbox_col6:last-child > p:nth-of-type(3) a,
+_::-webkit-full-page-media, _:future, :root .p-business .p-business_works .p-business_worksItem1 > table td
+  font-weight: normal

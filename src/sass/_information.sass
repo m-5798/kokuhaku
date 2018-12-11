@@ -99,6 +99,9 @@
           > dd
             font-weight: lighter
             letter-spacing: 1px
+            white-space: nowrap
+          > dd a
+            display: inline-block
           > dd + dd
             line-height: 1.8
             margin-top: 6px
@@ -122,3 +125,62 @@
   .p-information_ffjp
     font-family: $fontFamily
     letter-spacing: .75px
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-information
+    &#{&}-open
+      .p-information_contents
+        height: 100vh
+    .p-information_toggle
+      top: 10px
+      left: auto
+      right: 20px
+    .p-information_contents
+      > .c-flexbox
+        padding-bottom: 30px
+        background-position: calc(50% + 60px) 500px
+        background-size: 222px 38px
+        display: block
+        overflow-y: auto
+        > .c-flexbox_col
+          position: static
+          overflow: hidden
+          &:nth-child(1)
+            margin: 30px 0 0 30px
+          &:nth-child(2)
+            margin: 20px 0 0 30px
+            > p
+              bottom: 50px
+          &:nth-child(3)
+            margin: 40px 0 0 30px
+            > p
+              bottom: 30px
+          > ul
+            position: absolute
+            top: 70px
+            right: 26px
+            > li
+              margin: 30px 0 0 0
+              display: block
+              &:nth-child(1)
+                width: 20px
+                height: 20px
+                margin-top: 0
+              &:nth-child(2)
+                width: 20px
+                height: 20px
+                padding-left: 4px
+              &:nth-child(3)
+                width: 20px
+                height: 16px
+
+
+// Safari
+_::-webkit-full-page-media, _:future, :root .p-information .p-information_contents > .c-flexbox > .c-flexbox_col > dl > dt span,
+_::-webkit-full-page-media, _:future, :root .p-information .p-information_contents > .c-flexbox > .c-flexbox_col > dl > dd,
+_::-webkit-full-page-media, _:future, :root .p-information .p-information_contents > .c-flexbox > .c-flexbox_col > p
+  font-weight: normal
+
+

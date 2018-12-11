@@ -42,3 +42,62 @@
       &:nth-child(3)
         width: 37px
         margin-left: 65px
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-works
+    width: 100%
+    padding: 0 20px
+    margin-top: 130px
+    overflow-x: hidden
+    > div
+      padding: 0 20px
+      margin: 50px 0 0
+    > div > p
+      font-size: $fontSize_xs
+    .c-flexbox
+      min-height: auto
+      margin: 74px 0 0 0
+      display: block
+      > .c-flexbox_col6:nth-child(1)
+        width: 140px
+        padding-bottom: 23px
+        margin: 0 auto
+        border-right: 0 none transparent
+      > .c-flexbox_col6:nth-child(1) p:first-child
+        font-size: $fontSize_m
+        margin-top: 0
+      > .c-flexbox_col6:nth-child(1) p:last-child
+        font-size: $fontSize_xxs
+        margin-top: 12px
+        a
+          padding-bottom: 8px
+      > .c-flexbox_col6:nth-child(2)
+        width: 100%
+        border-top: 1px solid #231815
+    .p-works_social
+      width: 165px
+      height: 27px
+      margin: 25px auto 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .c-socialIconLink
+        display: block
+        &:nth-child(1)
+          width: 27px
+          height: 27px
+        &:nth-child(2)
+          width: 14px
+          height: 26px
+          margin-left: 0
+        &:nth-child(3)
+          width: 26px
+          height: 21px
+          margin-left: 0
+
+
+// Safari
+_::-webkit-full-page-media, _:future, :root .p-works .c-flexbox > .c-flexbox_col6:nth-child(1) p:last-child a
+  font-weight: normal
