@@ -51,12 +51,6 @@
           font-size: $fontSize_s
           font-weight: lighter
           letter-spacing: 1px
-          padding-right: 45px
-          background-image: url("#{$imagePath}/arrow_black.svg")
-          background-position: right center
-          background-repeat: no-repeat
-          background-size: 41px 4px
-          display: inline-block
 
 
 // SP
@@ -94,8 +88,9 @@
         > .c-flexbox_col:last-child
           position: static
         > .c-flexbox_col > p,
-        > .c-flexbox_col > ul
-          font-size: $fontSize_xs
+        > .c-flexbox_col > ul > li
+          font-size: $fontSize_xs + .1
+          line-height: 1.5
         > .c-flexbox_col > img
           top: -35px
           right: 0
@@ -109,7 +104,8 @@
       > div
         margin-top: 9px
         > p:first-child
-          font-size: $fontSize_xs
+          font-size: $fontSize_xs + .1
+          line-height: 1.5
         > p:last-child
           margin-top: 17px
           a

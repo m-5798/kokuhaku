@@ -38,7 +38,7 @@
     align-items: center
     position: absolute
     top: 25px
-    left: calc(50% + 580px)
+    left: calc(50% + 595px)
     cursor: pointer
     &:hover
       opacity: .5
@@ -84,10 +84,10 @@
           margin-left: 65px
           > dl > dd:nth-of-type(2) a
             padding-bottom: 11px
-            background-image: url("#{$imagePath}/arrow_white.svg")
-            background-position: left bottom
-            background-repeat: no-repeat
-            background-size: 41px 4.4px
+            // background-image: url("#{$imagePath}/arrow_white.svg")
+            // background-position: left bottom
+            // background-repeat: no-repeat
+            // background-size: 41px 4.4px
         > dl
           margin-top: -20px
           > dt
@@ -136,12 +136,11 @@
     .p-information_toggle
       top: 10px
       left: auto
-      right: 20px
+      right: 12px
     .p-information_contents
       > .c-flexbox
         padding-bottom: 30px
-        background-position: calc(50% + 60px) 500px
-        background-size: 222px 38px
+        background-image: none
         display: block
         overflow-y: auto
         > .c-flexbox_col
@@ -154,9 +153,16 @@
             > p
               bottom: 50px
           &:nth-child(3)
-            margin: 40px 0 0 30px
+            margin: 45px 0 0 30px
             > p
               bottom: 30px
+          > dl
+            margin-top: -15px
+            > dt
+              margin: 15px 0 5px
+            > dd + dd
+              line-height: 1.4
+              margin-top: 2px
           > ul
             position: absolute
             top: 70px

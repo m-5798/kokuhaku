@@ -69,6 +69,39 @@
     flex-wrap: wrap
 
 
+@keyframes arrowAnimation
+  0%
+    background-position: 93% 60%
+  100%
+    background-position: 100% 60%
+    opacity: 0
+
+@keyframes arrowBottomAnimation
+  0%
+    background-position: -2% 100%
+  100%
+    background-position: 5% 100%
+    opacity: 0
+
+.c-arrowLink
+  padding-right: 55px
+  background-image: url("#{$imagePath}/arrow_black.svg")
+  background-position: 93% 60%
+  background-repeat: no-repeat
+  background-size: 41px 4px
+  display: inline-block
+  opacity: 1
+  &:hover
+    animation: arrowAnimation .25s ease-in
+  &.c-arrowLink-bottom
+    padding-bottom: 15px
+    padding-right: 0
+    background-position: -2% 100%
+    &:hover
+      animation: arrowBottomAnimation .25s ease-in
+  &.c-arrowLink-white
+    background-image: url("#{$imagePath}/arrow_white.svg")
+
 .c-socialIconLink
   > a
     transition: none 0 ease

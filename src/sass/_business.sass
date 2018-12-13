@@ -28,12 +28,6 @@
           font-size: $fontSize_s
           font-weight: lighter
           letter-spacing: 1px
-          padding-right: 45px
-          background-image: url("#{$imagePath}/arrow_black.svg")
-          background-position: right center
-          background-repeat: no-repeat
-          background-size: 41px 4px
-          display: inline-block
       .c-flexbox_col6:last-child > p:nth-of-type(4)
         letter-spacing: .75px
         margin-top: 24px
@@ -103,11 +97,13 @@
             font-size: $fontSize_m
             margin-top: 20px
           .c-flexbox_col6:last-child > p:nth-of-type(3)
-            font-size: $fontSize_xxs
             line-height: 1
             margin-top: 20px
-          .c-flexbox_col6:last-child > p:nth-of-type(4)
+          .c-flexbox_col6:last-child > p:nth-of-type(3) a
             font-size: $fontSize_xs
+          .c-flexbox_col6:last-child > p:nth-of-type(4)
+            font-size: $fontSize_xs + .1
+            line-height: 1.5
             margin-top: 10px
       .p-business_productsItem2
         margin-top: 25px
@@ -119,7 +115,8 @@
       margin: 45px 0 0
       .p-business_worksItem1
         > p
-          font-size: $fontSize_xs
+          font-size: $fontSize_xs + .1
+          line-height: 1.5
           margin-top: 20px
         > table
           margin-top: 20px
