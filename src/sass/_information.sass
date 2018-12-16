@@ -14,13 +14,14 @@
   z-index: 2
   &#{&}-open
     .p-information_toggle
-      > div:before
-        background-color: #fff
-        transform: rotate(45deg)
+      > div:before,
       > div:after
-        margin-top: -1px
+        height: 2px
         background-color: #fff
-        transform: rotate(-45deg)
+      > div:before
+        transform: translateY(1px) rotate(45deg)
+      > div:after
+        transform: translateY(-1px) rotate(-45deg)
     .p-information_contents
       transition: width 0s 0s, height 0s 0s, opacity .3s ease-out
       width: 100vw
