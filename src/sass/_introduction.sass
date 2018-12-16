@@ -8,6 +8,8 @@
 
 .p-introduction
   padding: 0 70px
+  position: relative
+  z-index: $zIntroduction
   .p-introduction_title
     height: 100vh
     display: flex
@@ -26,7 +28,10 @@
         display: inline-block
   .p-introduction_lede
     height: 100vh
-    margin-top: 90px
+    margin-top: 1900px
+    > .c-flexbox_col
+      padding: 25px
+      background-color: rgba(#f7f4ef, .8)
     p
       line-height: 1
       text-align: center
@@ -64,6 +69,7 @@
         bottom: 80px
     .p-introduction_lede
       padding: 0 30px 40px
+      margin-top: 1400px
       p
         &:nth-child(2),
         &:nth-child(3)

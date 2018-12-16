@@ -1,0 +1,35 @@
+@keyframes imgAnimation
+  0%
+    opacity: 0
+    transform: translateY(20px)
+    filter: brightness(3)
+  0%
+    filter: brightness(5)
+  100%
+    opacity: 1
+    transform: translateY(0)
+    filter: brightness(1)
+
+.p-images
+  position: absolute
+  top: 0
+  left: 0
+  z-index: $zImages
+  width: 100%
+  .p-images_inner
+    position: relative
+  .p-images_item
+    img
+      opacity: 0
+    &.p-images_item-show img
+      animation: imgAnimation .7s ease-out
+      animation-fill-mode: forwards
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-images
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+

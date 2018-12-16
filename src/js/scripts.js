@@ -57,6 +57,7 @@ if (typeof Site === 'undefined') {
         , memberH2_2 = '[data-kkhk-member-h2_2]'
         , memberH2_3 = '[data-kkhk-member-h2_3]'
         , memberH2_4 = '[data-kkhk-member-h2_4]'
+        , images = '[data-kkhk-img]'
         , variation = '-show'
         ;
 
@@ -77,8 +78,8 @@ if (typeof Site === 'undefined') {
         ScrollOut({
           targets: obj,
           once: true,
-          onShown: function() {
-            $(obj).addClass(showClass);
+          onShown: function(el) {
+            $(el).addClass(showClass);
           }
         });
       });
@@ -91,6 +92,20 @@ if (typeof Site === 'undefined') {
           $(el).addClass($(el).attr('class') + variation);
         }
       });
+
+      $(images).each(function() {
+        var showClass = $(this).attr('class') + variation
+          , offsetTop = $(this).offset().top - 100
+          ;
+        ScrollOut({
+          targets: $(this),
+          offset: offsetTop,
+          once: true,
+          onShown: function(el) {
+            $(el).addClass(showClass);
+          }
+        });
+      });
     };
 
   })(Site, window);
@@ -100,4 +115,5 @@ $(document).ready(function () {
   Site.anchorScroll();
   Site.toggleInfo();
   Site.scrollOut();
+  var rellax = new Rellax('.rellax');
 });

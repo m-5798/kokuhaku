@@ -1,0 +1,56 @@
+<%
+  var images = [
+        { name: 'k_1', ext: '.jpg', s: -4, w: 193, h: 289, top: '-23px', left: 'calc(50% + 84px)', spW: 124, spH: 186, spTop: '-17px', spLeft: 'calc(50% - 91px)' },
+        { name: 'k_2', ext: '.jpg', s: -1, w: 299, h: 449, top: '109px', left: 'calc(50% - 490px)', spW: 150, spH: 224, spTop: '204px', spLeft: 'calc(50% - 161px)' },
+        { name: 'k_3', ext: '.jpg', s: -2, w: 498, h: 332, top: '166px', left: 'calc(50% + 376px)', spW: 234, spH: 156, spTop: '108px', spLeft: 'calc(50% + 5px)' },
+        { name: 'k_4', ext: '.jpg', s: -1, w: 376, h: 563, top: '429px', left: 'calc(50% + 376px)', spW: 190, spH: 284, spTop: '388px', spLeft: 'calc(50% + 71px)' },
+        { name: 'k_5', ext: '.jpg', s: -2, w: 446, h: 310, top: '497px', left: 'calc(50% + 97px)', spW: 224, spH: 156, spTop: '323px', spLeft: 'calc(50% - 5px)' },
+        { name: 'k_6', ext: '.jpg', s: -1, w: 325, h: 536, top: '582px', left: 'calc(50% - 351px)', spW: 172, spH: 282, spTop: '494px', spLeft: 'calc(50% - 134px)' },
+        { name: 'k_7', ext: '.jpg', s: -4, w: 201, h: 302, top: '757px', left: 'calc(50% - 108px)', spW: 0, spH: 0, spTop: '0', spLeft: '0' },
+        { name: 'k_8', ext: '.jpg', s: -4, w: 389, h: 258, top: '790px', left: 'calc(50% + 99px)', spW: 252, spH: 168, spTop: '659px', spLeft: 'calc(50% + 6px)' },
+        { name: 'k_9', ext: '.jpg', s: -2, w: 381, h: 254, top: '804px', left: 'calc(50% - 453px)', spW: 288, spH: 192, spTop: '685px', spLeft: 'calc(50% - 152px)' },
+        { name: 'k_10', ext: '.jpg', s: -2, w: 486, h: 323, top: '935px', left: 'calc(50% + 219px)', spW: 288, spH: 192, spTop: '523px', spLeft: 'calc(50% + 23px)' },
+        { name: 'k_11', ext: '.jpg', s: -1, w: 471, h: 313, top: '961px', left: 'calc(50% - 158px)', spW: 244, spH: 162, spTop: '749px', spLeft: 'calc(50% - 20px)' },
+        { name: 'k_12', ext: '.jpg', s: -1, w: 406, h: 541, top: '988px', left: 'calc(50% - 616px)', spW: 224, spH: 300, spTop: '1053px', spLeft: 'calc(50% - 118px)' },
+        { name: 'k_13', ext: '.jpg', s: -2, w: 277, h: 416, top: '1080px', left: 'calc(50% - 272px)', spW: 210, spH: 316, spTop: '814px', spLeft: 'calc(50% - 78px)' },
+        { name: 'k_14', ext: '.jpg', s: -1, w: 548, h: 381, top: '1121px', left: 'calc(50% + 352px)', spW: 280, spH: 196, spTop: '914px', spLeft: 'calc(50% + 42px)' },
+        { name: 'k_15', ext: '.jpg', s: -3, w: 172, h: 258, top: '1208px', left: 'calc(50% - 37px)', spW: 130, spH: 196, spTop: '841px', spLeft: 'calc(50% - 169px)' },
+        { name: 'k_16', ext: '.jpg', s: -2, w: 309, h: 464, top: '1244px', left: 'calc(50% + 125px)', spW: 186, spH: 280, spTop: '1233px', spLeft: 'calc(50% + 76px)' },
+        { name: 'k_17', ext: '.jpg', s: -2, w: 440, h: 248, top: '1323px', left: 'calc(50% - 543px)', spW: 266, spH: 150, spTop: '962px', spLeft: 'calc(50% - 169px)' },
+        { name: 'k_18', ext: '.jpg', s: -3, w: 284, h: 189, top: '1355px', left: 'calc(50% + 413px)', spW: 216, spH: 144, spTop: '1042px', spLeft: 'calc(50% + 73px)' },
+        { name: 'k_19', ext: '.jpg', s: -2, w: 474, h: 316, top: '1388px', left: 'calc(50% - 293px)', spW: 288, spH: 192, spTop: '1255px', spLeft: 'calc(50% - 119px)' },
+        { name: 'k_20', ext: '.jpg', s: -3, w: 264, h: 331, top: '1427px', left: 'calc(50% + 313px)', spW: 0, spH: 0, spTop: '0', spLeft: '0' },
+        { name: 'k_21', ext: '.jpg', s: -1, w: 370, h: 494, top: '1512px', left: 'calc(50% - 133px)', spW: 184, spH: 246, spTop: '1328px', spLeft: 'calc(50% - 29px)' },
+        { name: 'k_22', ext: '.jpg', s: -1, w: 441, h: 299, top: '1542px', left: 'calc(50% - 579px)', spW: 246, spH: 168, spTop: '1186px', spLeft: 'calc(50% - 177px)' },
+        { name: 'k_23', ext: '.jpg', s: 0, w: 361, h: 514, top: '1617px', left: 'calc(50% + 376px)', spW: 152, spH: 216, spTop: '1104px', spLeft: 'calc(50% + 15px)' },
+        { name: 'k_24', ext: '.jpg', s: -2, w: 289, h: 434, top: '1636px', left: 'calc(50% - 417px)', spW: 184, spH: 276, spTop: '1386px', spLeft: 'calc(50% - 157px)' },
+        { name: 'k_25', ext: '.jpg', s: -1, w: 354, h: 531, top: '1657px', left: 'calc(50% + 117px)', spW: 198, spH: 296, spTop: '1504px', spLeft: 'calc(50% + 63px)' },
+      ];
+%>
+
+<div class="p-images">
+  <div class="p-images_inner">
+    <% images.forEach(function(v, i) { %>
+      <div class="rellax rellax-<%= v.name; %> c-visible-pc p-images_item" data-rellax-speed="<%= v.s; %>" data-kkhk-img><img src="<%= config.path.img; %>/photo/<%= v.name + v.ext; %>" width="<%= v.w / 2; %>" height="<%= v.h / 2; %>" alt="Kokuhaku Inc."></div>
+      <div class="rellax rellax-<%= v.name; %> c-visible-sp p-images_item" data-rellax-speed="<%= v.s; %>" data-kkhk-img><img src="<%= config.path.img; %>/photo/<%= v.name + v.ext; %>" width="<%= v.spW / 2; %>" height="<%= v.spH / 2; %>" alt="Kokuhaku Inc."></div>
+    <% });%>
+  </div>
+</div>
+
+<style type="text/css">
+.rellax { position: absolute; }
+<% for(v of images) { %>
+.rellax-<%= v.name %> {
+  top: <%= v.top; %>;
+  left: <%= v.left; %>;
+}
+<% } %>
+@media screen and (max-width:768px) {
+<% for(v of images) { %>
+  .rellax-<%= v.name %> {
+    top: <%= v.spTop; %>;
+    left: <%= v.spLeft; %>;
+  }
+<% } %>
+}
+</style>
