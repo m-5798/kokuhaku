@@ -11,11 +11,11 @@
     filter: brightness(1)
 
 .p-images
+  width: 100%
   position: absolute
-  top: 0
+  top: 100vh
   left: 0
   z-index: $zImages
-  width: 100%
   .p-images_inner
     position: relative
   .p-images_item
@@ -30,6 +30,6 @@
 @media screen and (max-width: $breakPoint)
   .p-images
     width: 100%
-    height: 100%
+    height: calc(100% - 100vh)
     overflow-x: hidden
 

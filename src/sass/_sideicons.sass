@@ -40,7 +40,11 @@
 // SP
 @media screen and (max-width: $breakPoint)
   .p-sideicons
+    transition: opacity .3s ease-out
     padding-left: 7px
+    opacity: 0
+    &.p-sideicons-show
+      opacity: 1
     > ul > li
       padding-right: 18px
       border-right: 0 none transparent

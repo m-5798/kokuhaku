@@ -25,7 +25,7 @@
     .p-information_contents
       transition: width 0s 0s, height 0s 0s, opacity .3s ease-out
       width: 100vw
-      height: 450px
+      height: 80vh
       box-shadow: 0 3px 8px rgba(#000, .05), 0 1px 5px rgba(#000, .08)
       opacity: 1
       animation: gradientAnimation 120s linear infinite
@@ -78,23 +78,22 @@
         margin: 45px 0 40px
         position: relative
         &:nth-child(1)
+          margin-top: 50px
           margin-left: 70px
         &:nth-child(2)
           margin-left: 45px
         &:nth-child(3)
           margin-left: 65px
+          > dl > dt:nth-of-type(2)
+            margin-top: 7px
           > dl > dd:nth-of-type(2) a
             padding-bottom: 11px
-            // background-image: url("#{$imagePath}/arrow_white.svg")
-            // background-position: left bottom
-            // background-repeat: no-repeat
-            // background-size: 41px 4.4px
         > dl
           margin-top: -20px
           > dt
             font-weight: bold
             letter-spacing: .75px
-            margin: 20px 0 7px
+            margin: 15px 0 5px
           > dt span
             font-weight: 100
           > dd
@@ -104,18 +103,20 @@
           > dd a
             display: inline-block
           > dd + dd
-            line-height: 1.8
-            margin-top: 6px
-        > ul > li
-          margin: 30px 0 0 25px
-          display: inline-block
-          &:nth-child(1)
+            line-height: 1.4
+            margin-top: 2px
+        > .c-flexbox
+          width: 120px
+          margin-top: 20px
+          > .c-flexbox_col:nth-child(1)
             width: 20px
-            margin-left: 0
-          &:nth-child(2)
+            height: 20px
+          > .c-flexbox_col:nth-child(2)
             width: 10px
-          &:nth-child(3)
+            height: 19px
+          > .c-flexbox_col:nth-child(3)
             width: 19px
+            height: 16px
         > p
           font-weight: lighter
           letter-spacing: 1px
@@ -157,31 +158,18 @@
             margin: 45px 0 0 30px
             > p
               bottom: 30px
+            > dl > dt:nth-of-type(2)
+              margin-top: 15px
           > dl
             margin-top: -15px
-            > dt
-              margin: 15px 0 5px
-            > dd + dd
-              line-height: 1.4
-              margin-top: 2px
-          > ul
+          > .c-flexbox
+            width: 20px
+            height: 100px
+            margin-top: 0
+            flex-direction: column
             position: absolute
             top: 70px
-            right: 26px
-            > li
-              margin: 30px 0 0 0
-              display: block
-              &:nth-child(1)
-                width: 20px
-                height: 20px
-                margin-top: 0
-              &:nth-child(2)
-                width: 20px
-                height: 20px
-                padding-left: 4px
-              &:nth-child(3)
-                width: 20px
-                height: 16px
+            right: 13px
 
 
 // Safari

@@ -39,10 +39,16 @@ h2
   font-weight: normal
   letter-spacing: .75px
   line-height: .9
-  padding-bottom: 11px
   margin: 0
-  border-bottom: 1px solid #231815
   display: inline-block
+  position: relative
+  &:after
+    content: ""
+    width: 100%
+    height: 1px
+    margin-top: 10px
+    background-color: #231815
+    display: block
 
 p
   line-height: 1.8
@@ -79,7 +85,8 @@ hr
 
   h2
     font-size: $fontSize_m
-    padding-bottom: 5px
+    &:after
+      margin-top: 5px
 
   img
     max-width: 100%

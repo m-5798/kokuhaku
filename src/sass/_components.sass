@@ -2,7 +2,7 @@
   transition: opacity 1.2s .5s ease-out, transform 1.2s ease-out
   position: fixed
   top: 25px
-  left: calc(50% - 570px)
+  left: calc(50% - 620px)
   z-index: $zLogo
   opacity: 0
   transform: translateY(50px)
@@ -22,9 +22,14 @@
   transition: opacity 1.2s .8s ease-out, transform 1.2s .3s ease-out
   opacity: 0
   transform: translateY(100px)
+  &:after
+    transition: width .3s 1.5s ease-out
+    width: 0
   &.c-heading2-show
     opacity: 1
     transform: translateY(0)
+    &:after
+      width: 100%
 
 .c-flexbox
   display: flex
@@ -71,35 +76,32 @@
 
 @keyframes arrowAnimation
   0%
-    background-position: 93% 60%
+    background-position: 0 center
+    opacity: 1
   100%
-    background-position: 100% 60%
-    opacity: 0
-
-@keyframes arrowBottomAnimation
-  0%
-    background-position: -2% 100%
-  100%
-    background-position: 5% 100%
-    opacity: 0
+    background-position: 10px center
+    opacity: .1
 
 .c-arrowLink
-  padding-right: 55px
-  background-image: url("#{$imagePath}/arrow_black.svg")
-  background-position: 93% 60%
-  background-repeat: no-repeat
-  background-size: 41px 4px
-  display: inline-block
-  opacity: 1
   &:hover
+    opacity: 1
+  &:after
+    content: ""
+    width: 51px
+    height: 4px
+    margin-left: 10px
+    background-image: url("#{$imagePath}/arrow_black.svg")
+    background-position: 0 center
+    background-repeat: no-repeat
+    background-size: contain
+    display: inline-block
+  &:hover:after
     animation: arrowAnimation .25s ease-in
   &.c-arrowLink-bottom
-    padding-bottom: 15px
-    padding-right: 0
-    background-position: -2% 100%
-    &:hover
-      animation: arrowBottomAnimation .25s ease-in
-  &.c-arrowLink-white
+    &:after
+      margin: 7px 0 0
+      display: block
+  &.c-arrowLink-white:after
     background-image: url("#{$imagePath}/arrow_white.svg")
 
 .c-socialIconLink

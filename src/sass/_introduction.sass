@@ -1,10 +1,8 @@
 @keyframes paragraphAnimation
   0%
     opacity: 0
-    transform: translateY(100px) scale(1.05)
   100%
     opacity: 1
-    transform: translateY(0) scale(1)
 
 .p-introduction
   padding: 0 70px
@@ -28,30 +26,29 @@
         display: inline-block
   .p-introduction_lede
     height: 100vh
-    margin-top: 1900px
+    margin-top: calc(100vh + 2300px)
+    background-color: #f7f4ef
     > .c-flexbox_col
       padding: 25px
-      background-color: rgba(#f7f4ef, .8)
-    p
-      line-height: 1
-      text-align: center
-      &:nth-child(2)
-        margin-top: 60px
-      &:nth-child(3)
-        margin-top: 55px
   .p-introduction_ledeItem
+    line-height: 1
+    text-align: center
+    margin-top: 35px
     opacity: 0
-    transform: translateY(50px) scale(1.05)
+    &:nth-child(1)
+      margin-top: 0
+    &:nth-child(6)
+      margin-top: 55px
     &.p-introduction_ledeItem-show
-      animation: paragraphAnimation 2s ease-out .8s
+      animation: paragraphAnimation 2.5s ease-out 1s
       animation-fill-mode: forwards
   .p-introduction_about
     text-align: center
     margin-top: 329px
     p
-      font-size: $fontSize_l
+      font-size: $fontSize_l + .4rem
       font-weight: lighter
-      line-height: 2
+      line-height: 1.8
     div
       margin-top: 93px
 
@@ -66,20 +63,29 @@
         width: 130px
         margin-top: -100px
       > div
-        bottom: 80px
+        bottom: 120px
     .p-introduction_lede
       padding: 0 30px 40px
-      margin-top: 1400px
-      p
-        &:nth-child(2),
-        &:nth-child(3)
-          margin-top: 40px
-        &:nth-child(3) img
-          width: 88px
+      margin-top: calc(100vh + 2500px)
+    .p-introduction_ledeItem
+      height: auto
+      &:nth-child(1) img
+        width: 227px
+      &:nth-child(2) img
+        width: 272px
+      &:nth-child(3) img
+        width: 177px
+      &:nth-child(4) img
+        width: 271px
+      &:nth-child(5) img
+        width: 223px
+      &:nth-child(6) img
+        width: 217px
     .p-introduction_about
       margin-top: 120px
       p
+        font-size: $fontSize_l - .4rem
         line-height: 1.5
       div
         padding: 0 45px
-        margin-top: 70px
+        margin-top: 60px

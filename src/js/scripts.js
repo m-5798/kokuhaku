@@ -24,10 +24,14 @@ if (typeof Site === 'undefined') {
         var speed = 400
           , href= $(this).attr('href')
           , target = $(href == '#' || href == '' ? 'html' : href)
-          , position = target.offset().top
+          , position = target.offset().top - 70
           ;
-        console.log(href);
-        position = (href === '#lede') ? position : position - 70;
+
+        if(href === '#lede') {
+          speed = 4000;
+          position = position + 70;
+        }
+
         $('body, html').animate({scrollTop:position}, speed, 'swing');
         return false;
       });
@@ -48,6 +52,9 @@ if (typeof Site === 'undefined') {
         , lede1 = '[data-kkhk-lede1]'
         , lede2 = '[data-kkhk-lede2]'
         , lede3 = '[data-kkhk-lede3]'
+        , lede4 = '[data-kkhk-lede4]'
+        , lede5 = '[data-kkhk-lede5]'
+        , lede6 = '[data-kkhk-lede6]'
         , businessH1 = '[data-kkhk-business-h1]'
         , businessH2_1 = '[data-kkhk-business-h2_1]'
         , businessH2_2 = '[data-kkhk-business-h2_2]'
@@ -57,6 +64,7 @@ if (typeof Site === 'undefined') {
         , memberH2_2 = '[data-kkhk-member-h2_2]'
         , memberH2_3 = '[data-kkhk-member-h2_3]'
         , memberH2_4 = '[data-kkhk-member-h2_4]'
+        , sideicons = '[data-kkhk-sideicons]'
         , images = '[data-kkhk-img]'
         , variation = '-show'
         ;
@@ -64,7 +72,9 @@ if (typeof Site === 'undefined') {
       $.each([
         lede1,
         lede3,
-        businessH1,
+        lede4,
+        lede5,
+        lede6,
         businessH2_1,
         businessH2_2,
         worksH1,
@@ -89,6 +99,15 @@ if (typeof Site === 'undefined') {
         once: true,
         onShown: function(el) {
           $(logo).addClass($(logo).attr('class') + variation);
+          $(el).addClass($(el).attr('class') + variation);
+        }
+      });
+
+      ScrollOut({
+        targets: businessH1,
+        once: true,
+        onShown: function(el) {
+          $(sideicons).addClass($(sideicons).attr('class') + variation);
           $(el).addClass($(el).attr('class') + variation);
         }
       });
