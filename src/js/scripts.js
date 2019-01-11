@@ -28,7 +28,7 @@ if (typeof Site === 'undefined') {
           ;
 
         if(href === '#lede') {
-          speed = 4000;
+          speed = 10000;
           position = position + 70;
         }
 
